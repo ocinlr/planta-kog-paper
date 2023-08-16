@@ -1,0 +1,49 @@
+%% Why bother?
+Proteins, as the building blocks of life on Earth, play a crucial 
+role in cellular maintenance, replication, and defense across all 
+living organisms~\citep{kaur2022}. They are involved in diverse 
+cellular functions, including signal transduction, regulation 
+of metabolic pathways, and responses to environmental 
+stimuli~\citep{zhang2010}.
+
+The study of proteins and their functions is a central focus in 
+molecular biology and bioinformatics research. Understanding the 
+biological function of proteins is essential for comprehending 
+the genetics of an organism~\citep{silva2020}. Among living 
+organisms, plants hold particular significance due to their 
+vital roles in photosynthesis and the establishment of various 
+ecosystems. The Plantae kingdom, encompassing a vast array of 
+species, exhibits unparalleled diversity in protein sequences 
+that have evolved over millions of years~\citep{chaudhary2019}. 
+This diversity arises from complex gene regulation processes, 
+including co-transcriptional, post-transcriptional, and 
+post-translational regulation~\citep{skelly2016}. Analyzing 
+patterns and variations within plant protein sequences can 
+provide invaluable insights into their evolutionary history 
+and adaptations to different ecological niches.
+
+Previous bioinformatics research has highlighted the utility 
+of the Clusters of Orthologous Groups (COGs) database for 
+protein annotation in prokaryotes and unicellular 
+eukaryotes~\citep{tatusov1997,tatusov2001}. An updated version, 
+the euKaryotic Orthologous Groups (KOGs), includes annotated 
+proteomes for seven eukaryotic model organisms, facilitating 
+the comparison of protein sequences across species and 
+identification of orthologous genes with common ancestry in 
+other eukaryotes~\citep{tatusov2003,yang2023,wangC2023,wangT2023}.
+
+%% What do we do?
+This study uses the KOGs framework to analyze 114 plant 
+proteomes. 
+%% How do we do it?
+Reference annotations from \emph{Arabidopsis 
+thaliana} in the KOG database are transferred to each 
+organism using BLASTP alignments~\citep{camacho2009} 
+and counted in relative frequency for comparison. 
+Normalized counts adding up to 1 are used also to make 
+comparisons among relevant biological categories.
+%% what for?
+Identifying patterns of functional annotations among 
+plant species provides insights into adaptive 
+mechanisms to respond to different environmental 
+situations.

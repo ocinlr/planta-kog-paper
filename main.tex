@@ -1,0 +1,264 @@
+%Version 2.1 April 2023
+% See section 11 of the User Manual for version history
+
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[referee,pdflatex,sn-basic]{sn-jnl}% referee := double spacing
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+%%%%
+
+\usepackage[super]{nth}% for superscripts
+
+
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+\newtheorem{proposition}[theorem]{Proposition}% 
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[Article Title]{Conservative ortholog families in 114 
+plants reveal plant and functional clusters resembling phylogeny
+% Protein diversity in plant proteomes: 
+% Elucidating evolutionary relationships through amino acid analysis
+}
+
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*[1,2]{\fnm{Nicolás} \sur{López-Rozo}}\email{nicolaslopez@javerianacali.edu.co}
+
+\author[3]{\fnm{Fabian} \sur{Tobar-Tosse}}
+
+\author[1,2]{\fnm{Jorge} \sur{Finke}}
+
+\author[1,2]{\fnm{Camilo} \sur{Rocha}}\email{camilo.rocha@javerianacali.edu.co}
+
+
+\affil*[1]{\orgdiv{Department of Electronics and Computer Science}, \orgname{Pontificia Universidad Javeriana Cali}, \orgaddress{\street{Calle 18 No. 118-250}, \city{Cali}, \postcode{111021}, \state{Valle del Cauca}, \country{Colombia}}}
+
+\affil[2]{\orgdiv{OMICAS program}, \orgname{Pontificia Universidad Javeriana Cali}, \orgaddress{\street{Calle 18 No. 118-250}, \city{Cali}, \postcode{111021}, \state{Valle del Cauca}, \country{Colombia}}}
+
+\affil[3]{\orgdiv{Department of Health Sciences}, \orgname{Pontificia Universidad Javeriana Cali}, \orgaddress{\street{Calle 18 No. 118-250}, \city{Cali}, \postcode{111021}, \state{Valle del Cauca}, \country{Colombia}}}
+
+%%================================%%
+%% Sample for structured abstract %%
+%%================================%%
+
+\abstract{
+\textbf{Main Conclusion} 
+This study unveils a hierarchical structure in 114 plant 
+proteomes based on KOG category frequencies, resembling 
+phylogenetic taxonomy. Additionally, significant correlations 
+between KOG and Gene Ontology annotations support reliable 
+insights into plant speciation and adaptation mechanisms.
+
+
+\textbf{Abstract}
+% Proteins are essential for the functioning of cells in living 
+% organisms, including plants. This study examines the protein 
+% sequences of 114 plants, as well as 
+% the related annotations using the concept of Eukaryotic 
+% orthologous groups (KOGs). Based on the KOG category counts 
+% of annotated proteins, a hierarchical classification that 
+% groups similar plants is carried out, providing insights 
+% into their shared evolutionary histories and adaptation 
+% strategies. We also compare Gene Ontology and KOG categories 
+% and find a strong correlation between the two rankings, 
+% supporting the reliability of our results. These findings have 
+% important implications for understanding plant speciation, 
+% interactions in their environment, and responses to changing 
+% conditions.
+
+Functional annotations in plant genomes are essential properties 
+for defining adaptative mechanisms under different stress 
+conditions. Plants, when compared to animals, exhibit a higher 
+grade of diversification and sophistication by its non-locomotive 
+capacity. However, multi-omics approaches have no confidence in 
+some functional enrichments due to its fuzzy phenotypic 
+association. Therefore, new approaches based on biological 
+insights should be applied. In this study, an exploration of 
+114 plant proteomes elucidate singularities in the 
+functional prioritization based on orthologous genes and their 
+meaning in plant adaptative properties. Results show a 
+differentiated trend in the density of functional annotations 
+for physiologically distant groups (Eudicots, Monocots, Algae). 
+Furthermore, frequency of some functional categories show 
+relevance at the task of plant classification. Finally, the 
+frequency patterns of the mentioned groups are proposed as an 
+insight on the frequency of functional groups for other 
+organisms.
+}
+
+\keywords{
+Bioinformatics,
+Functional diversity,
+Hierarchical classification,
+Comparative analysis,
+Gene Ontology}
+
+\maketitle
+
+\subsection*{Abbreviations}
+
+KOG: euKaryotic Orthologous Groups
+
+COG: Clusters of Orthologous Groups
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+\input{s1intro}
+
+
+\section{Materials and Methods}
+\label{sec:method}
+\input{s2methods}
+
+
+\section{Results}
+\label{sec:results}
+\input{s3results}
+
+
+\section{Discussion and Conclusion}
+\label{sec:conclusion}
+\input{s4conclusion}
+
+
+
+
+
+
+\vspace{1in}
+
+\backmatter
+
+
+\textbf{Author contribution statement} Conceptualization: N.L.-R. and 
+F.T.-T.; Methodology: N.L.-R. and F.T.-T.; Software: N.L.-R.; 
+Validation: N.L.-R.; Investigation: N.L.-R.; 
+Data curation: N.L.-R.; 
+Writing---original draft preparation: N.L.-R.; 
+Writing---review and editing: F.T.-T., J.F. and C.R.; 
+Project administration: J.F and C.R.; 
+Funding acquisition: J.F. and C.R.;
+All authors have read and agreed to the published version of the 
+manuscript.
+
+\textbf{Acknowledgments}
+We would like to thank prof. Oliver Ebenhöh, Camila Riccio and 
+Mauricio Ramírez-Castrillón for their helpful comments and 
+insights.
+
+\textbf{Funding}
+This work was partially funded by the ``OMICAS program:
+Optimización Multiescala In-silico de Cultivos Agrícolas 
+Sostenibles (Infraestructura y validación en Arroz y Caña de 
+Azúcar)'' Scientific Ecosystem belonging to the Colombia 
+Científica Program, sponsored by The World Bank, The 
+Ministry of Science, Technology and Innovation (MINCIENCIAS), 
+ICETEX, the Colombian Ministry of Education and the Colombian 
+Ministry of Commerce, Industry and Tourism, under GRANT ID: 
+FP44842-217-2018, OMICAS Award ID: 792-61187.
+
+\textbf{Data availability}
+The datasets used and/or analyzed during 
+the current study are available from the corresponding author on 
+reasonable request.
+
+
+\section*{Declarations}
+
+\textbf{Conflicts of interest}
+The authors declare no conflicts of interest relevant to the content 
+of this manuscript.
+
+\textbf{Ethics approval and consent to participate}
+Not applicable.
+
+\textbf{Consent for publication}
+Not applicable.
+
+\textbf{Open Access}
+This article is licensed under a Creative Commons 
+Attribution 4.0 International License, which permits use, sharing, 
+adaptation, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source,
+provide a link to the Creative Commons license, and indicate if changes
+were made. The images or other third party material in this article are
+included in the article's Creative Commons license, unless indicated
+otherwise in a credit line to the material. If material is not included 
+in the article's Creative Commons license and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will
+need to obtain permission directly from the copyright holder. To view a
+copy of this license, visit \url{http://creativecommons.org/licenses/by/4.0/}
+
+\begin{appendices}
+
+\section{Section title of first appendix}\label{secA1}
+
+An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
+
+%%=============================================%%
+%% For submissions to Nature Portfolio Journals %%
+%% please use the heading ``Extended Data''.   %%
+%%=============================================%%
+
+%%=============================================================%%
+%% Sample for another appendix section			       %%
+%%=============================================================%%
+
+%% \section{Example of another appendix section}\label{secA2}%
+%% Appendices may be used for helpful, supporting or essential material that would otherwise 
+%% clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
+%% tables and equations etc.
+
+\end{appendices}
+
+%%===========================================================================================%%
+%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+%% system, please include the references within the manuscript file itself. You may do this  %%
+%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+%% file, and delete the associated \verb+\bibliography+ commands.                            %%
+%%===========================================================================================%%
+
+\bibliography{refs}
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
+
+\end{document}
