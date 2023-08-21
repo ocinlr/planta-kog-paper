@@ -69,7 +69,7 @@ in nuclear regulatory processes among these plants.
 Another important insight is to look at translational 
 and posttranslational processes (categories J and O, 
 respectively). These two categories add up to more than 
-36\% of in all biological groups, showing how significant the 
+36\% of all biological groups, showing how significant the 
 proteome acts toward these housekeeping tasks.
 
 
@@ -79,19 +79,32 @@ proteome acts toward these housekeeping tasks.
 % Presentation of the hierarchical organization of plant 
 % species based on KOG counts
 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/Taxa}
+\caption{Taxonomy tree of the plant species of this study, 
+tagged by biological category: Eudicots (blue), Monocots 
+(red), Algae (green), and Other (white).
+}
+\label{fig:taxa}
+\end{figure}
+
 Before presenting the results of a hierarchical 
 classification based on the KOG category counts, it is 
 important to mention that the retrieved dataset consists 
 mainly of Eudicotyledons (61.4\%) and Monocotyledons (25.4\%). 
 The vast majority of Eudicots belong to the Rosids (56) 
-and the Asterids clades (9). On the other hand, it can be 
-observed on the taxonomic tree (Figure~\ref{fig:taxa}) 
-that it encompasses a wide array of species 
-spanning algae, mosses, ferns and flowering plants.
+and the Asterids clades (9). Figure~\ref{fig:taxa} presents 
+the taxonomic hierarchy of 
+the 114 studied plants, using information from the NCBI Taxonomy 
+Browser and the online tool Interactive Tree Of Life for 
+the tree representation~\citep{letunic2021}. Note that it 
+encompasses a wide array of species spanning algae, 
+mosses, ferns and flowering plants.
 
 \begin{figure}[htp!]
 \centering
-\includegraphics[width=1.1\textwidth]{figures/dendrogram_ward}
+\includegraphics[width=1.05\textwidth]{figures/dendrogram_ward}
 \caption{Dendrogram of the Phytozome proteomes, using KOG 
 category frequencies as vector representations for 
 computing euclidean distance}
@@ -102,11 +115,11 @@ computing euclidean distance}
 % Examination of species groupings and their agreement with known taxonomic classifications
 Based on the obtained frequencies of KOG annotations (both 
 relative and normalized), the corresponding hierarchical 
-classification is carried out and the resulting 
+classification is carried out, and the resulting 
 dendrogram can be observed in Figure~\ref{fig:dendrogram}.
 The first aspect that comes unnoticed are the red cluster at 
 the left side including many algae and the 
-Eudicots-only cluster shown in orange at the right side. 
+Eudicots-only cluster shown in orange on the right side. 
 While the former includes 5 non-algae and leaves out 
 two algae, the latter is outstanding on the grounds 
 that it perfectly groups all plants from the 
@@ -123,7 +136,7 @@ are correctly clustered.
 
 Furthermore, Figure~\ref{fig:clustermap} displays a 
 heatmap showing both a hierarchical clustering on the KOG 
-categories as well as on the species, as previously depicted 
+categories and on the species, as previously depicted 
 in detail. Further analysis of the clustering shows 4 clearly 
 differentiated clusters, also related to the ranking shown in 
 Figure~\ref{fig:EMAO}:
@@ -141,8 +154,8 @@ on categories and on species}
 \item Categories B, J, O, and R are the most abundant. A 
 predominance of processes related to genetic information 
 processing and regulation can be observed in this cluster.
-\item Categories \verb|NO_CAT|, Z, U, C, and T follow the 
-frequencies of previous cluster. This cluster revolves 
+\item Categories \verb|NO_CAT|, Z, U, C, and T. This 
+cluster revolves 
 mostly around cellular dynamics and signaling, although the 
 presence of \verb|NO_CAT| suggest a diverse set of functions.
 \item Categories G, E, A, K, S, D, P, I, and Q suggest that 

@@ -1,31 +1,53 @@
 %% Why bother?
-Proteins, as the building blocks of life on Earth, play a crucial 
-role in cellular maintenance, replication, and defense across all 
-living organisms~\citep{kaur2022}. They are involved in diverse 
-cellular functions, including signal transduction, regulation 
-of metabolic pathways, and responses to environmental 
+Proteins, as the building blocks of life on Earth, play a 
+crucial role in cellular maintenance, replication, and defense 
+across all living organisms~\citep{kaur2022}. They are involved 
+in diverse cellular functions, including signal transduction, 
+regulation of metabolic pathways, and responses to environmental 
 stimuli~\citep{zhang2010}.
 
 The study of proteins and their functions is a central focus in 
 molecular biology and bioinformatics research. Understanding the 
 biological function of proteins is essential for comprehending 
-the genetics of an organism~\citep{silva2020}. Among living 
+the genetics of an organism~\citep{silva2020}. Furthermore, 
+functional annotations are useful when computationally improving 
+classification or correlation tasks on proteins, especially those 
+involving noisy data. 
+
+Among living 
 organisms, plants hold particular significance due to their 
 vital roles in photosynthesis and the establishment of various 
-ecosystems. The Plantae kingdom, encompassing a vast array of 
+ecosystems. Moreover, their adaptive mechanisms consist of a 
+wide range of molecular processes, many of which still remain 
+unidentified. The Plantae kingdom, encompassing a vast array of 
 species, exhibits unparalleled diversity in protein sequences 
 that have evolved over millions of years~\citep{chaudhary2019}. 
-This diversity arises from complex gene regulation processes, 
+Such diversity arises from complex gene regulation processes 
+that define cell response to stimuli or plant adaptation, 
 including co-transcriptional, post-transcriptional, and 
-post-translational regulation~\citep{skelly2016}. Analyzing 
+post-translational regulation~\citep{skelly2016}. In 
+consequence, analyzing 
 patterns and variations within plant protein sequences can 
 provide invaluable insights into their evolutionary history 
-and adaptations to different ecological niches.
+and adaptations to different ecological niches, which could be 
+used in current analysis methods to establish 
+relationships among plant species.
 
-Previous bioinformatics research has highlighted the utility 
-of the Clusters of Orthologous Groups (COGs) database for 
-protein annotation in prokaryotes and unicellular 
-eukaryotes~\citep{tatusov1997,tatusov2001}. An updated version, 
+When assessing adaptive mechanisms in plant cells, the 
+identification of proteins or their unique attributes
+involves an intricate process due to the complexity of plant 
+genomes and their expression products. Although 
+computational models enhance the definition of significant elements 
+in plant cell biology, this process could potentially lead to an 
+extrapolation of overrepresented information from databases, rather 
+than capturing the entirety of plant understanding. In order to 
+to provide an identification framework for homologous relationships 
+between proteins of different organisms, the database of 
+% Previous bioinformatics research has highlighted the utility of the 
+Clusters of Orthologous Groups (COGs) is
+created~\citep{tatusov1997,tatusov2001}. Its goal is to enable 
+protein annotations in prokaryotes and unicellular 
+eukaryotes. An updated version, 
 the euKaryotic Orthologous Groups (KOGs), includes annotated 
 proteomes for seven eukaryotic model organisms, facilitating 
 the comparison of protein sequences across species and 
@@ -33,17 +55,21 @@ identification of orthologous genes with common ancestry in
 other eukaryotes~\citep{tatusov2003,yang2023,wangC2023,wangT2023}.
 
 %% What do we do?
-This study uses the KOGs framework to analyze 114 plant 
+This study uses the KOG framework to analyze 114 plant 
 proteomes. 
 %% How do we do it?
 Reference annotations from \emph{Arabidopsis 
 thaliana} in the KOG database are transferred to each 
-organism using BLASTP alignments~\citep{camacho2009} 
-and counted in relative frequency for comparison. 
-Normalized counts adding up to 1 are used also to make 
-comparisons among relevant biological categories.
+organism using alignments and some patterns of the frequency of
+certain functional categories are elucidated, both discriminating 
+biological clusters of plants and interpreting the computed 
+hierarchical classification on the species.
 %% what for?
-Identifying patterns of functional annotations among 
-plant species provides insights into adaptive 
+The identified patterns among functional annotations and 
+plant species provide insights into adaptive 
 mechanisms to respond to different environmental 
-situations.
+situations. Furthermore, these patterns elucidate the close 
+relationship between physiological differences and metabolic 
+pathways involved in adaptive processes, which could be 
+considered as integrating several levels of so-called 
+omic information.
