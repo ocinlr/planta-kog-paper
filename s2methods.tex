@@ -17,7 +17,7 @@ trichopoda}), 10 Algae (9 \emph{Chlorophyta} and 1
 \emph{Rhodophyta}), and 4 other species: \emph{Marchantia 
 polymorpha}, \emph{Physcomitrella patens}, \emph{Selaginella 
 moellendorffii}, and \emph{Sphagnum fallax}. Careful selection 
-ensured representation across various plant families and a 
+ensures representation across various plant families and a 
 broad taxonomic range. The complete list with the information 
 of the species can be found in the Supplementary material.
 
@@ -25,18 +25,20 @@ of the species can be found in the Supplementary material.
 \subsection{Eukaryotic Orthologous Groups (KOGs) Analysis}
 \label{sec:method.kog}
 
-The Eukaryotic Orthologous Groups (KOGs) database by 
-\cite{tatusov2003} is used to analyze the collected protein 
-sequences. A sequence alignment approach (BLASTP) mapped the 
+The Eukaryotic Orthologous Groups (KOGs) database (available at
+\url{https://ftp.ncbi.nih.gov/pub/COG/KOG/}) 
+by \cite{tatusov2003} is used to analyze the collected protein 
+sequences. The BLASTP sequence alignment algorithm maps the 
 selected protein sequences to the corresponding KOGs, 
 identifying orthologous groups and conserved 
 domains~\citep{camacho2009}. Only BLASTP matches with an 
-identity greater than or equal to 95\% were considered.
+identity greater than or equal to 95\% and e-value lower 
+than -10 are considered.
 
-Subsequently, annotations were transferred to all species, 
-and the frequency of each annotation was assessed as the 
-number of proteins in each transferred category (e.g., K - 
-Transcription). Protein counts were scaled relative to the 
+Subsequently, annotations are transferred to all species, 
+and the frequency of each annotation is assessed as the 
+number of proteins belonging to this annotation (e.g., K - 
+Transcription). Protein counts are scaled relative to the 
 total number of proteins in each organism, enabling a 
 fair comparison despite varying annotation coverage after 
 BLASTP alignment.

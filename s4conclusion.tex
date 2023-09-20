@@ -61,9 +61,7 @@ processes and signaling. On the other hand, the category
 Chromatin structure and dynamics (B) stands out among other 
 categories and biological groups. This behavior can also 
 be noted on Figure~\ref{fig:clustermap} for the cluster
-related to most algae. Although some evidence has been found on 
-the role of epigenetics modifications on microalgae and how 
-they adapt to environmental conditions, no clear 
+related to most algae.
 In this regard, evidence shows that the genome of \emph{C. 
 reinhardtii} has an unusual pattern of methylation when compared 
 to other plants or animals~\citep{bacova2020}. Furthermore, 
@@ -107,54 +105,90 @@ Other biological groups is a matter worth a closer look,
 since no conclusion about their classification can be 
 established based on these results.
 
+Similar approaches can be found in the literature. For 
+instance, The \emph{GeneFamilyPhylogenyBuilder} tool from 
+PlantTribes2 computes a hierarchical classification of 
+plants based on multiple sequence 
+alignment~\citep{wafula2023}. In turn, PlantTribes2 uses 
+RAxML or FastTree 
+algorithms for estimating maximum likelihood (ML) 
+phylogenetic trees. This is different to our approach 
+because functional categories are not considered in the 
+hierarchical classification.
+
+Another approach can be found in The Plant Orthology Browser, 
+which uses gene models for 20 fully sequenced plant genomes 
+and leverages GO annotations to determine sets of conserved 
+synteny blocks~\citep{tulpan2017}. This resource, as well as
+InParanoiDB 9~\citep{persson2023}, are focused on ortholog 
+prediction and use functional annotations for finding such 
+ortholog groups. However, our goal is to assess the 
+importance of those annotations on adaptive processes.
+
 
 \subsection{Comparison between Gene Ontology and Phytozome}
 \label{sec:conclusion.comparison}
 
-The comparison between KOG-based and GO-based 
+The comparison between Phytozome-based and GO-based 
 classifications revealed a high degree of concordance, 
 with a Spearman's rank correlation coefficient of 0.98. 
-This suggests the robustness of the KOG annotations and 
+This confirms the robustness of the KOG annotations and 
 their alignment with GO annotations in characterizing 
-protein functions. The minor differences observed in the 
+protein functions~\citep{tatusov2003}. 
+The minor differences observed in the 
 rankings of certain categories stress the complementary 
 nature of these databases in providing a comprehensive 
 understanding of protein functionality. Differential 
 enrichment of certain categories between the databases 
 hints at distinct emphasis in annotation curation.
 
+Regarding the inference of species relationships, the 
+approach presented in this study also differs from the one 
+presented by~\cite{wafula2023} in PlantTribes2, where 
+functional annotations are extracted from Gene Ontology, 
+InterPro/Pfam protein domains, The Arabidopsis Information 
+Resource (TAIR), UniProtKB/TrEMBL, and UniProtKB/Swiss-Prot.
+However, the approach presented in this study differs from 
+those of PlantTribes2, The Plant Orthology Browser, and 
+InparanoiDB because it uses the counting of annotated proteins 
+for each functional category in KOG, instead of directly using 
+some form of sequence alignment. It does not mean that the 
+presented approach uses no alignment whatsoever, but it is only 
+a preprocessing that helps in retrieving the mentioned counts.
+
+
 
 \subsection{Conclusion}
 \label{sec:conclusion.conclusion}
 
-This study contributes to our understanding of plant 
-proteomics and adaptive biology in several ways. The 
-analysis of KOG category counts provides insights into 
-the functional diversity and adaptations of plant 
-proteomes, highlighting key categories involved in 
-essential biological processes. The hierarchical 
-classification offers a visualization of adaptation 
-relationships and clusters that align with known 
-taxonomic groups. These findings offer valuable 
-resources for future research, including investigations 
-into convergent evolution, functional adaptations, and the 
-molecular mechanisms governing speciation.
-
-These results contribute to the broader field of 
-bioinformatics and proteomics, offering new perspectives on 
-the functional diversity and evolutionary relationships 
-among plant species. This study lays the foundation for 
-continued exploration of plant proteomics and its 
-implications for understanding plant-environment 
-interactions and adaptations.
-
-In conclusion, the comprehensive analysis of protein 
+The comprehensive analysis of protein 
 sequences within the Plantae kingdom using KOGs has 
 unveiled intricate patterns of functional distribution, 
 evolutionary relationships, and shared annotations with 
-the GO database. The integration of bioinformatics tools, 
-hierarchical classification, and statistical analyses has 
-provided a deeper understanding of plant biology and evolution. 
+the GO database. Namely, This study presents 
+how the functional annotations vary among the defined plant 
+clusters. These averaged distributions of category counts 
+can be used as an initial criterion for classifying a 
+unobserved organism based on how similar its own category counts 
+are from each cluster. Furthermore, the applied methodology 
+for identifying these functional annotation distributions 
+can be extended to more organisms or even applied again 
+from scratch for other life kingdoms, where a 
+functional criterion for classification could elucidate 
+additional relationships between organisms. A broad coverage of 
+the studied kingdom is highly encouraged.
+
+Furthermore, some clusters found by the methodology presented 
+in this study are similar to phylogenetic groups, such 
+as the \emph{Brassicaceae} or the algae-rich cluster, as observed
+in Figure~\href{fig:clustermap}. This, in 
+turn, shows that adaptive processes could be closely related 
+to how the proteome responds to environmental cues, although 
+the direction of causality and if such causality between the 
+two even exists, is not assessed in this study.
+Overall, the integration of bioinformatics tools, 
+hierarchical classification, and statistical analyses provides 
+a deeper understanding of plant biology and adaptive processes. 
 This study paves the way for further research and 
 applications in molecular biology, bioinformatics, and 
 proteomics, ultimately enhancing our knowledge of 

@@ -6,8 +6,10 @@
 Due to the process of aligning each proteome against the 
 reference model in KOG and the strict alignment criterion 
 of 95\% minimum identity, many sequences of the Phytozome 
-database don't find a matching pair in KOG. As expected, 
-\emph{A. thaliana} is the best represented proteome from 
+database don't find a matching pair in KOG. This can also 
+be rooted in the scarce database coverage. As expected, the
+Phytozome version of \emph{A. thaliana}  is the best 
+represented proteome from 
 all 114 in the dataset, with a global coverage of 96.48\%, 
 being the average and median coverage of 6.95\% and 
 3.80\%, respectively. The next 
@@ -46,9 +48,9 @@ for KOG categories are 3.84\% and 0.685\%, respectively.
 
 % Comparison of KOG category frequencies among different taxonomic groups (e.g., Monocots, Eudicots, Algae, etc.)
 As seen in Figure~\ref{fig:EMAO}, the top 4 represented 
-categories are still the same as the mentioned for the whole 
-database, although the rank changes for Algae: now the most 
-represented category is ``Chromatin structure and 
+categories (B, J, O, R) are the same as the mentioned for the 
+whole database, although the rank changes for Algae: now the 
+most represented category is ``Chromatin structure and 
 biogenesis". Especially for the Algae and Other groups, there 
 is a lack of representation of several KOG categories, 
 leading to red gaps in the shown heatmap.
@@ -93,9 +95,9 @@ Before presenting the results of a hierarchical
 classification based on the KOG category counts, it is 
 important to mention that the retrieved dataset consists 
 mainly of Eudicotyledons (61.4\%) and Monocotyledons (25.4\%). 
-The vast majority of Eudicots belong to the Rosids (56) 
-and the Asterids clades (9). Figure~\ref{fig:taxa} presents 
-the taxonomic hierarchy of 
+The vast majority of Eudicots belong to the \emph{Rosids} (56) 
+and the \emph{Asterids} clades (9). Figure~\ref{fig:taxa} 
+presents the taxonomic hierarchy of 
 the 114 studied plants, using information from the NCBI Taxonomy 
 Browser and the online tool Interactive Tree Of Life for 
 the tree representation~\citep{letunic2021}. Note that it 
@@ -175,9 +177,9 @@ cellular structure, integrity, defense and maintenance.
 After computing the relative and normalized KOG frequency 
 counts for both Phytozome and GO proteomes, the analysis 
 results are presented in Figure~\ref{fig:GO}. Note that 
-although relative values are not very similar, 
-the difference is almost indiscernible between the normalized 
-frequency values for both databases. Furthermore, the result 
+relative values are very similar, and the difference between 
+normalized frequency values for both databases 
+is almost indiscernible. Furthermore, the result 
 of using the Spearman's rank correlation coefficient is 0.98, 
 suggesting minor differences between the two databases. The 
 correlation coefficients shown below correspond to the 
