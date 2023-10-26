@@ -1,16 +1,14 @@
-By employing the data collection and analysis methods outlined 
-below, this study aims to comprehensively explore the protein 
-sequences of plants and their adaptive relationships based 
-on KOGs. The integration of bioinformatics tools, hierarchical 
-classification, and statistical analyses offers novel insights 
-into plant evolution and functional adaptations.
+This study comprehensively explores plant protein sequences and 
+their adaptive relationships based on KOGs, utilizing data 
+collection and analysis methods that integrate bioinformatics 
+tools, hierarchical classification, and statistical analyses.
 
 
 \subsection{Data Collection and Selection}
 \label{sec:method.data}
 
 A comprehensive dataset of protein sequences from diverse plants 
-is retrieved from the PhytozomeV13 Database~\citep{goodstein2011}.
+is sourced from the PhytozomeV13 Database~\citep{goodstein2011}.
 This dataset consists of 114 proteomes, including 100 
 Angiosperms (29 Monocots, 70 Eudicots, and \emph{Amborella 
 trichopoda}), 10 Algae (9 \emph{Chlorophyta} and 1 
@@ -18,23 +16,22 @@ trichopoda}), 10 Algae (9 \emph{Chlorophyta} and 1
 polymorpha}, \emph{Physcomitrella patens}, \emph{Selaginella 
 moellendorffii}, and \emph{Sphagnum fallax}. Careful selection 
 ensures representation across various plant families and a 
-broad taxonomic range. The complete list with the information 
-of the species can be found in the Supplementary material.
+broad taxonomic range.
 
 
 \subsection{Eukaryotic Orthologous Groups (KOGs) Analysis}
 \label{sec:method.kog}
 
-The Eukaryotic Orthologous Groups (KOGs) database (available at
-\url{https://ftp.ncbi.nih.gov/pub/COG/KOG/}) 
+The Eukaryotic Orthologous Groups (KOGs) database 
 by \cite{tatusov2003} is used to analyze the collected protein 
-sequences. The BLASTP sequence alignment algorithm maps the 
+sequences (available at
+\url{https://ftp.ncbi.nih.gov/pub/COG/KOG/}). 
+The BLASTP sequence alignment algorithm maps the 
 selected protein sequences to the corresponding KOGs, 
 identifying orthologous groups and conserved 
 domains~\citep{camacho2009}. Only BLASTP matches with an 
 identity greater than or equal to 95\% and e-value lower 
 than -10 are considered.
-
 Subsequently, annotations are transferred to all species, 
 and the frequency of each annotation is assessed as the 
 number of proteins belonging to this annotation (e.g., K - 
@@ -49,20 +46,19 @@ BLASTP alignment.
 
 To gain insights into the evolutionary relationships among 
 the studied plant species, a hierarchical classification 
-system is used based on KOG counts of annotated proteins. 
+system is employed based on KOG counts of annotated proteins. 
 The normalized frequency of each annotation serves as a 
-26-dimensional vector representation for each species. Using 
-the \emph{linkage} algorithm with parameters set to "ward" 
-for method and "euclidean" for metric from the scipy library 
-in Python, a hierarchical organization of plant species with 
-similar KOG profiles is obtained at different taxonomic 
-levels. The linkage approach provided a visual representation 
+26-dimensional vector representation for each species. Using the 
+"ward" method for linkage and "euclidean" metric, a hierarchical 
+organization of plant species with similar KOG profiles is 
+obtained at different taxonomic levels. The linkage approach 
+provides a visual representation 
 of the relationships between taxa, offering a hierarchical 
 perspective of plant evolution. Additional vignettes were 
 included in the graphical representation to apply biological 
 categories to plants: Monocot, Eudicot, Alga, or Other. 
 For simplicity, \emph{Amborella trichopoda} is included in 
-the Other category for simplicity.
+the \emph{Other} category for simplicity.
 
 
 \subsection{Comparison of Gene Ontology and Phytozome}
@@ -72,8 +68,8 @@ To validate the KOG-based classification of Phytozome proteomes
 and explore the functional implications of identified 
 orthologous groups, a 
 comparison with information from the Gene Ontology (GO) 
-database was performed~\citep{ashburner2000,consortium2023}.
-Namely, the annotated proteomes of GO are retrieved and the 
+database is performed~\citep{ashburner2000,consortium2023}.
+Namely, the annotated proteomes of GO are retrieved, and the 
 same procedure of KOG annotation transfer is performed on them.
 
 The results obtained with Phytozome are summarized by 
@@ -83,7 +79,7 @@ Similarly, functional annotations from the GO database are
 transferred to each organism using BLASTP, and frequency 
 counts for those annotations are computed. Besides, an 
 additional computation is performed on the frequency counts, 
-from now on addressed as normalized count: the frequencies 
+referred to as normalized count: the frequencies 
 for a proteome were scaled to add up to 1. Note that these 
 values are different from the results of the previous 
 scaling procedure, due to the vast amount of proteins 
@@ -94,7 +90,7 @@ compared among them and against the global distribution.
 
 Through statistical analyses and correlation studies, the 
 concordance between the KOG-based classification of Phytozome 
-and GO was assessed. This comparison allowed for 
-evaluation of the consistency and reliability of the 
-hierarchical classification and provided insights into the 
-functional relevance of the identified protein groups.
+and GO is assessed. This comparison allows for the 
+evaluation of consistency and reliability of the 
+hierarchical classification and provides insights into the 
+functional importance of the identified protein groups.

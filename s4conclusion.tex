@@ -1,4 +1,3 @@
-
 In this study, a comprehensive exploration of protein 
 sequences within the Plantae kingdom is conducted, with 
 particular focus on emerging patterns and relationships 
@@ -17,44 +16,44 @@ The analysis of KOG category counts across the 114 plant
 proteomes reveals notable patterns of protein functional 
 distribution. Proteomes show varying degrees of 
 representation, with \emph{A. thaliana} standing out as 
-the best-represented proteome. Other plants, although under 
-represented, have an important role in human nutrition or 
-health industries. An example is the unicellular green 
-alga \emph{D. salina}, whose 
-biomass or its extracts have been shown to produce 
-positive effects on the treatment of cardiovascular 
-diseases and cancer, as well as immunomodulatory and 
-anti-inflammatory properties~\citep{hyrslova2022}. 
+the best-represented proteome. However, it's crucial to 
+note that less-represented plants may hold significant 
+importance in various industries and human health. 
+
+For instance, the unicellular green 
+alga \emph{D. salina} is underrepresented but has shown 
+promise in treatments for cardiovascular diseases and 
+cancer, as well as immunomodulatory and anti-inflammatory 
+properties~\citep{hyrslova2022}. 
 Carrot (\emph{D. carota}) is another plant 
-with a low representation in this study but with an 
-outstanding importance due to its antioxidant, 
-anti-inflammatory, plasma lipid modification, and 
-antitumor properties, which can help reduce the risk of 
-cancer and cardiovascular diseases~\citep{ahmad2019}. The 
+with low representation in this study but has significant 
+relevance due to its antioxidant, anti-inflammatory, and 
+potential anticancer properties, which can contribute to 
+reducing the risk of cancer and cardiovascular 
+diseases~\citep{ahmad2019}. The 
 least represented plant \emph{A. trichopoda} has a rich 
-phytochemical landscape that may have potential applications 
-in the pharmaceutical and biotechnology industries, due to 
+phytochemical landscape with potential applications in 
+pharmaceutical and biotechnology industries, thanks to 
 its diverse glycosylated flavonoids, anthocyanins, and 
 proanthocyanidins~\citep{wu2019}. 
 
 Considering the normalized count results shown in 
-Figure~\ref{fig:EMAO}, there are many aspects to consider.
+Figure~\ref{fig:EMAO}, several insights emerge.
 First, Eudicots and Monocots, the two most closely 
-related groups, shows some differences in functional 
+related groups, exhibit differences in functional 
 categories related to metabolism. Namely, a rupture 
 in the trend can be seen on 
 the categories of transport and metabolism of inorganic ions 
-(P), amino acids (E), and carbohydrates (G). These 
-differences could be associated to core differences between 
-the two groups at the physiological level, especially 
-regarding nutrient acquisition: Eudicots have one main root 
+(P), amino acids (E), and carbohydrates (G). Notably, 
+differences in nutrient acquisition strategies may 
+underlie these distinctions: Eudicots have one main root 
 (taproot) where other smaller roots branch off, while 
 Monocots have more fibrous roots webbing off in different 
-directions~\citep{freschet2021}. Furthermore, evidence 
-indicates that metabolic pathways related to nitrogen 
-uptake, carbohydrate accumulation, and metal 
-transport show differences between Eudicots and 
-Monocots~\citep{yang2020,tian2016}.
+directions~\citep{freschet2021}. Studies have also highlighted 
+variations in metabolic pathways related to nitrogen uptake, 
+carbohydrate accumulation, and metal transport between 
+Eudicots and Monocots~\citep{yang2020,tian2016}.
+
 Secondly, algae display a lack of representation on some 
 functional categories, most of them related to cellular 
 processes and signaling. On the other hand, the category 
@@ -62,9 +61,10 @@ Chromatin structure and dynamics (B) stands out among other
 categories and biological groups. This behavior can also 
 be noted on Figure~\ref{fig:clustermap} for the cluster
 related to most algae.
-In this regard, evidence shows that the genome of \emph{C. 
-reinhardtii} has an unusual pattern of methylation when compared 
-to other plants or animals~\citep{bacova2020}. Furthermore, 
+This divergence in functional categories suggests unique 
+genomic and epigenetic features in these organisms, such 
+as unusual patterns of DNA methylation in some algae 
+species~\citep{bacova2020}. Furthermore, 
 \cite{vigneau2021} explain that DNA methylation seems to govern 
 speciation in plants: in green algae, it occurs in gene-poor 
 regions, while in bryophytes marks genes and is crucial for the 
@@ -72,11 +72,11 @@ life cycle of the plant. On the other hand, DNA methylation for
 \emph{Arabidopsis} and Angiosperms occurs by silencing some 
 gametophyte-specific genes.
 
-Overall, the varying 
+The varying 
 representation of KOG categories among different taxonomic 
 groups, such as Eudicots, Monocots, and Algae, provides 
 insights into potential differences in functional roles 
-and adaptations.
+and adaptations in plants.
 
 
 \subsection{Hierarchical Classification Results}
@@ -88,42 +88,32 @@ both known taxonomic classifications and adaptive
 relationships. The presence of distinct clusters, 
 particularly the \emph{Brassicaceae} cluster and the 
 algae-rich group, reflects the diversity within the 
-Plantae kingdom and the similarities on a broad approach to
-hierarchical classification in comparison to the taxonomic tree.
-Important to note is the fact that the 5 non-algae plants related 
-to the latter group have some agricultural importance: Carrot 
+Plantae kingdom and shows similarities with taxonomic trees.
+
+It is noteworthy that the cluster comprising algae also 
+includes several non-algae plants with agricultural 
+importance, such as  Carrot 
 (\emph{D. carota}), wheat (\emph{T. aestivum}), lettuce 
 (\emph{L. sativa}), pineapple (\emph{A. comosus}), and 
 prince's-feather (\emph{A. hypochondriacus}).
 
-The emergence of few well-defined mini-clusters, including 
+Some well-defined mini-clusters emerge, including 
 \emph{A. thaliana}, \emph{Citrus}, and \emph{Sorghum}, 
-calls attention to the shared functional roles among 
-species from the same genus. The placement of 
-\emph{A. trichopoda} and the plants from the Monocot and 
-Other biological groups is a matter worth a closer look, 
-since no conclusion about their classification can be 
-established based on these results.
-
-Similar approaches can be found in the literature. For 
-instance, The \emph{GeneFamilyPhylogenyBuilder} tool from 
-PlantTribes2 computes a hierarchical classification of 
-plants based on multiple sequence 
-alignment~\citep{wafula2023}. In turn, PlantTribes2 uses 
-RAxML or FastTree 
-algorithms for estimating maximum likelihood (ML) 
-phylogenetic trees. This is different to our approach 
-because functional categories are not considered in the 
-hierarchical classification.
-
-Another approach can be found in The Plant Orthology Browser, 
-which uses gene models for 20 fully sequenced plant genomes 
-and leverages GO annotations to determine sets of conserved 
-synteny blocks~\citep{tulpan2017}. This resource, as well as
-InParanoiDB 9~\citep{persson2023}, are focused on ortholog 
-prediction and use functional annotations for finding such 
-ortholog groups. However, our goal is to assess the 
-importance of those annotations on adaptive processes.
+indicating shared functional roles among species of the 
+same genus. However, the placement of 
+\emph{A. trichopoda} and the plants from the 
+\emph{Monocot} and \emph{Other} biological groups 
+requires further investigation, and no definitive 
+conclusions about their classification can be drawn 
+based on these results.
+Our approach differs from other methods found in the 
+literature, such as PlantTribes2, The Plant Orthology 
+Browser, or InParanoiDB 9, as it focuses on functional 
+category counts rather than sequence 
+alignment~\citep{wafula2023,tulpan2017, persson2023}. 
+While these approaches provide valuable insights, our 
+goal is to assess the importance of functional 
+annotations in understanding adaptive processes.
 
 
 \subsection{Comparison between Gene Ontology and Phytozome}
@@ -168,9 +158,9 @@ evolutionary relationships, and shared annotations with
 the GO database. Namely, This study presents 
 how the functional annotations vary among the defined plant 
 clusters. These averaged distributions of category counts 
-can be used as an initial criterion for classifying a 
-unobserved organism based on how similar its own category counts 
-are from each cluster. Furthermore, the applied methodology 
+can serve as an initial criterion for classifying unobserved 
+organisms based on the similarity of their category counts to 
+established clusters. Furthermore, the applied methodology 
 for identifying these functional annotation distributions 
 can be extended to more organisms or even applied again 
 from scratch for other life kingdoms, where a 
@@ -178,14 +168,14 @@ functional criterion for classification could elucidate
 additional relationships between organisms. A broad coverage of 
 the studied kingdom is highly encouraged.
 
-Furthermore, some clusters found by the methodology presented 
-in this study are similar to phylogenetic groups, such 
-as the \emph{Brassicaceae} or the algae-rich cluster, as observed
-in Figure~\href{fig:clustermap}. This, in 
-turn, shows that adaptive processes could be closely related 
-to how the proteome responds to environmental cues, although 
-the direction of causality and if such causality between the 
-two even exists, is not assessed in this study.
+Moreover, the clustering patterns revealed in this study, 
+some of which align with phylogenetic groups, emphasize 
+the potential connection between functional adaptations 
+and the proteome's response to environmental cues. For 
+instance, the \emph{Brassicaceae} or the algae-rich 
+cluster, as observed in Figure~\href{fig:clustermap}, 
+are very similar to their reference counterparts. However, 
+this study does not assess the causality of that connection.
 Overall, the integration of bioinformatics tools, 
 hierarchical classification, and statistical analyses provides 
 a deeper understanding of plant biology and adaptive processes. 
